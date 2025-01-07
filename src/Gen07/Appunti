@@ -1,0 +1,21 @@
+Database Relazionali e MySQL
+------------------------------
+Capitolo 1 Database relazionali e i diagrammi ER
+
+-Quasi tutte le applicazioni al giorno d'oggi utilizzano una grande quantita di dati
+-La mole di questi dati cresce sempre piu nel tempo, soprattutto dopo l'avvento di internet
+ e della diffusione esplosiva del numero di dispositivi elettronici.
+-Se i dati fossero direttamente parte dell'applicazione questo porterebbe a grandi problemi
+ di portabilità ed efficienza
+-Per questo nello sviluppo software vale sempre il seguente mantra:
+ i dati vanno sempre separati dall'applicazione
+
+Tali dati per poter essere facilmente utilizzabili devono essere organizzati
+Non solo, ma devono essere anche salvati in un "raccoglitore comune"
+Da queste esigenze nasce il concetto di database
+
+-I database sono una componente fondamentale nella progettazione di un software,
+ in particolare in ambito enterprise
+-Sono dei raccoglitori di dati: le informazioni che devono essere memorizzate
+ per il funzionamento delle applicazioni vengono raccolti in questo tipo di struttura
+-Il principio alla base dell'esistenza dei database è quello della separazione tra dati e applicazione
