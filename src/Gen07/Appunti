@@ -19,3 +19,86 @@ Da queste esigenze nasce il concetto di database
 -Sono dei raccoglitori di dati: le informazioni che devono essere memorizzate
  per il funzionamento delle applicazioni vengono raccolti in questo tipo di struttura
 -Il principio alla base dell'esistenza dei database è quello della separazione tra dati e applicazione
+
+Uno dei modelli di database piu utilizzati e d importanti è il modello relazionale
+Questo tipo di modello è basato sul concetto di relazione tra i dati stessi,
+e viene generalmente utilizzato per trattare una grande quantità di informazioni.
+Molto utilizzato in caso di dati strutturati e strettamente connessi tra loro.
+
+Pro:
+-Scalabile
+-Il concetto di relazione tra i dati permette di linkare piu entita tra loro.
+-Gestito da un linguaggio universale, il SQL
+-Si adatta molto bene a grandi quantita di dati
+-Permetti di organizzazione dei dati molto robusta
+-Si adatta perfettamente alla OOP nella creazione di applicazioni.
+
+Contro:
+-Poco flessibile ai cambiamenti.
+-Alcune operazioni, come il join, lo rendono dispendioso e meno efficiente dei database non relazionali
+-Poco adatto in caso di dato molto sparsi.
+-Poco adatto in caso di dati non relazionati tra loro.
+------------------------------
+Cos'è un database relazionale
+
+-Un database relazionale è composto da un insieme di tabelle le quali vengono
+ usate per contenere le informazioni sugli oggetti da rappresentare nel database.
+-Ogni tabella ha uno schema cioè un insieme di campi o attributi (colonne) e di record (righe).
+-Ogni campo ha un nome e un tipo (integer string date ecc.)
+-Ogni record contiene informazioni su una particolare istanza di quegli oggetti rappresentati dalla tabella.
+
+-In ogni tabella andiamo ad identificare un gruppo di
+ campi che rappresenta la chiave primaria di quella tabella.
+-La chiave primaria permette di identificare univocamente un record della tabella.
+-Ovviamente è buona regola che la chiave si aminimale cioè deve essere la piu piccola
+ possibie in maniera tale da adempiere al suo compito
+-Chiavi primarie composte da piu campi si chiamano chiavi
+ primarie multiple e generalmente si cerca di evitarle
+
+-Altro concetto fondamentale è quello di chiave esterna (foreign key)
+-Una foreign key è un insieme di campi (generalmente 1) che è congruente
+ a quello di un'altra tabella in modo da creare una relazione tra le due
+-Tramite le foreign keys possiamo dunque creare delle query
+ complesse che riguardano piu tabelle, insieme all'operazione di join
+
+-Ci sono diversi tipo di relazioni che possono esservi in un database
+-Il diverso tipo è dato dalla cardinalità delle relazioni stesse,
+ cioè il limite minimo e massimo di istanze in relazione che possono essere coinvolte.
+-Possiamo distinguere 3 tipo di relazioni:
+    1.Relazioni uno ad uno, o one-to-one
+    2.Relazioni uno a molti, o one-to-many
+    3.Relazione molti a molti, o many-to-many
+
+Diagrammi ER
+
+-Rettangoli = Entità
+-Cerchi = Attributi
+-Rombi = Relazioni
+
+-La cardinalità di una relazione è una coppia di numeri naturali che specifica
+ il numero minimo e massimo di istanze di relazione a cui una istanza dell'entità
+ puo partecipare. é possibile indicare con la costante N un numero generico maggiore
+ di uno quando la cardinalità non è nota con precisione
+
+many to many 0,N - 1,N
+one to one 0,1 - 1,1
+one to many 0,N - 1,1
+--------------------------
+Linguaggio SQL
+
+-Per creare database, settare i ruoli dedi vari utenti, e per effettuare ogni
+ possibile operazione su di esso, utilizziamo un linguaggio universale per i
+ database relazionali: il linguaggio SQL
+-Questo linguaggio è composto da una serie di parole chiave in inglese
+ solitamente poste in maiuscolo, e dagli operatori aritmetici standard.
+
+-Con il tempo varie versioni del SQL sono state create a seconda
+ dei differenti dbms(database management systems)
+-Tutte queste diverse versioni vanno trattate come diversi "dialetti" della stessa lingua.
+-Posso esserci infatti delle piccoli variazioni sintattiche ma le funzionalità sono le stesse.
+
+-I comandi SQL si suddivisono in tre categorie
+    1.Comandi DCL (Data Control Language)
+    2.Comandi DDL (Data Definition Language)
+    3.Comandi DML (Data Manipulation Language)
+
