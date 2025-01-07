@@ -101,4 +101,59 @@ Linguaggio SQL
     1.Comandi DCL (Data Control Language)
     2.Comandi DDL (Data Definition Language)
     3.Comandi DML (Data Manipulation Language)
+----------------------------------
+Comandi DDL
+-I comandi DDL consentono di operare sullo schema del database
+-Vengono usati per impostare lo scheletro del DB per creare tabelle con attributi e vincoli
+-Vincoli di integrità dei dati.
 
+Tipi per gli attributi
+Ogni attributo deve avere un tipo univoco
+non esiste il boolean, si usa il TINYINT
+-------
+sintassi
+
+CREATE TABLE [IF NOT EXISTS]
+table_name (
+    column_1_definition,
+    column_2_definition,
+    ////
+    table_constraints              /*Constraint = vincolo
+)
+---------
+Vincoli di integrità referenziale
+Vincoli di integrità sulle tabelle
+Vincoli di integrità sulle colonne
+
+-Integrità Referenziale
+    Sono quei vincoli che permettono di definire le relazioni tra diverse tabelle
+    Vincola gli attributi di una tabella ad essere congruenti a quelli di un altra tabella
+    In pratica si impostano delle foreign keys
+
+sintassi
+    FOREIGN KEY (Colonna-Tabella-Interna)
+    REFERENCES Nome-Tabella-Esterna (Nome-Tabella-Esterna)
+    [ON DELETE {CASCADE | NO ACTION | SET NULL | SET DEFAULT}]
+    [ON UPDATE {CASCADE | NO ACTION | SET NULL | SET DEFAULT}]
+
+CASCADE: se avviene una modifica o cancellazione di un record nella tabella madre contenente
+         la foreign key della tabella figlia a cascata viene aggiornato o cancellato anche
+         il record della tabella figlia
+NO ACTION: impedisce all'utente di eseguire tale operazione per una violazione
+           di vincolo referenziale. è l'opzione di default
+SET NULL: in caso di cancellazione o modifica il valore del record sulla foreign key viene settato a null
+SET DEFAULT: in caso di cancellazione o modifica il valore del record sulla
+             foreign key viene settato al valore di default.
+RESTRICT: la cancellazione o la modifica in un record della tabella madre è permessa solo se
+          quel record è senza riferimenti dalla tabella figlia.
+
+-Integrità sulle Tabelle
+    La caratteristica di questi vincoli è che riguardano tutta la tabella, non solo alcuni attributi
+    Tra questi vincoli troviamo quelli di PRIMARY KEY, ma anche il CHECK (controlla che tra due
+    attributi si verifichi una condizione) tra piu attributi e il vincolo UNIQUE che permette di
+    rendere univoci uno o piu attributi non chiave primaria
+
+-Integrità sulle Colonne
+    Vincoli che riguardano un singolo attributo
+    DEFAULT, CHECK su singola colonna, NOT NULL
+    Esempi come BETWEEN per un intervallo o LIKE per usare una regex
